@@ -2,9 +2,7 @@
 name: Hello
 
 on: 
-  push:
-    branches: [main]
-    
+  workflow_dispatch:    
 
 #These are the jobs
 jobs:
