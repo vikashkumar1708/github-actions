@@ -1,0 +1,14 @@
+#just practice foe my YAML 
+name: vikash 
+DOB: 17/08/2004
+age: 21
+hobbies: 
+  - movies
+  - gym
+  - watching teen taal
+tools: [a,b,c,d]
+experience: 
+  devops:
+    - linux: 1
+    - shell scripting: 2
+    
