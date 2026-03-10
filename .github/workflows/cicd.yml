@@ -18,13 +18,15 @@ jobs:
        run: echo "pipeline is build"
 #job 3 
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: testing is done
        run: echo "all esting is done"
 #job 4
   deploy:
-  runs-on: ubuntu-latest
-  steps:
-    - name: deployment is done
-     run: echo "here deployment is done"
+    needs: [build,test]
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment is done
+       run: echo "here deployment is done"
