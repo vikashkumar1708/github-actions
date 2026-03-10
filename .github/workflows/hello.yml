@@ -1,0 +1,22 @@
+#This is workflow name
+name: Hello
+
+on: 
+  push:
+    branches: [main]
+    
+
+#These are the jobs
+jobs:
+# this is the name of the job
+  greet:
+  #This is githun runner 
+    runs-on: ubuntu-latest     # instead of ubuntu we can also use mac,windows
+    steps:
+      - name: say hello to users
+        run: echo"Hello user"
+
+      - name: say hello to username
+        run: echo "hello $USER"
+        
+  
