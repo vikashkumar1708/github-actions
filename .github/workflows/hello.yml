@@ -13,15 +13,15 @@ jobs:
   #This is githun runner 
     runs-on: ubuntu-latest     # instead of ubuntu we can also use mac,windows
     steps:
-      - name: say hello to users
-        run: echo "Hello user"
+       - name: say hello to users
+         run: echo "Hello user"
 
-      - name: say hello to username
-        run: echo "hello $USER"
+       - name: say hello to username
+         run: echo "hello $USER"
 
-    details:
+  details:
       runs-on: ubuntu-latest
       steps:
         - name: show what is the version of python,docker ,etc
-        run: docker --version && python --version
+          run: docker --version && python --version
   
