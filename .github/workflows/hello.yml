@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest     # instead of ubuntu we can also use mac,windows
     steps:
       - name: say hello to users
-        run: echo"Hello user"
+        run: echo "Hello user"
 
       - name: say hello to username
         run: echo "hello $USER"
