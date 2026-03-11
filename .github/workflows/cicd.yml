@@ -12,20 +12,21 @@ jobs:
        run: echo "code cloned from github"
 # job 2
   build:
+    needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build using tools
        run: echo "pipeline is build"
 #job 3 
   test:
-    needs: build
+    needs: [code,build]
     runs-on: ubuntu-latest
     steps:
       - name: testing is done
        run: echo "all esting is done"
 #job 4
   deploy:
-    needs: [build,test]
+    needs: [code,build,test]
     runs-on: ubuntu-latest
     steps:
       - name: deployment is done
