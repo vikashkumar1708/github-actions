@@ -2,7 +2,16 @@ name: CI/CD
 
 on:
   workflow_dispatch:
-
+    inputs:
+      environments:
+        description: This is environment alue where workflow runs
+        default: 'dev'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+          - staging
 jobs:
 # job 1
   code:
@@ -26,6 +35,7 @@ jobs:
         run: echo "all esting is done"
 #job 4
   deploy:
+    if: inputs.environments == 'dev'
     needs: [code,build,test]
     runs-on: ubuntu-latest
     steps:
