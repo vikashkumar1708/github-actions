@@ -9,25 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: code clone
-       run: echo "code cloned from github"
+        run: echo "code cloned from github"
 # job 2
   build:
     needs: code
     runs-on: ubuntu-latest
     steps:
       - name: build using tools
-       run: echo "pipeline is build"
+        run: echo "pipeline is build"
 #job 3 
   test:
     needs: [code,build]
     runs-on: ubuntu-latest
     steps:
       - name: testing is done
-       run: echo "all esting is done"
+        run: echo "all esting is done"
 #job 4
   deploy:
     needs: [code,build,test]
     runs-on: ubuntu-latest
     steps:
       - name: deployment is done
-       run: echo "here deployment is done"
+        run: echo "here deployment is done"
